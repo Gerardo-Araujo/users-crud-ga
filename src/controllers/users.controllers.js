@@ -43,7 +43,7 @@ const  update = catchError(async(req, res) => {
         password: password,
         birthday: birthday,
         }, { where: { id:id}, returning: true});
-    return res.json(users);
+    return res.json(users[1][0]);
 });
 
 module.exports = {
